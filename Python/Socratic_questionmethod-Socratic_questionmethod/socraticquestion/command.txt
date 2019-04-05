@@ -1,0 +1,6 @@
+# cmd
+rm -d -r db.sqlite3
+rm -d -r app/migrations/*
+
+# Django
+python manage.py migrate --run-syncdb

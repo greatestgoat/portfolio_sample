@@ -1,0 +1,16 @@
+{% extends 'base.html' %}
+
+{% load crispy_forms_tags %}
+
+{% block content %}
+    <h1>New question</h1>
+
+    <form method="POST" class="question-form">
+        {% csrf_token %}
+        {{ form|crispy }}
+        <button type="submit" class="endinput btn btn-default">入力終了</button>
+        <button type="reset" class="cancel btn btn-default" style="position: relative; left: 50px; top: 0px;" >リセット</button>
+        <button type="button" class="cancel btn btn-default" onclick="history.back()" style="position: relative; left: 100px; top: 0px;">キャンセル</button>
+    </form>
+
+{% endblock %}

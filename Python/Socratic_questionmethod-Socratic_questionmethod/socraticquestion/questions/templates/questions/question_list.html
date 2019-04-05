@@ -1,0 +1,13 @@
+{% extends 'base.html' %}
+{% block content %}
+    <div class="centerstage">
+        {% for question in question_list %}
+            <div class="question">
+                <h1><a href="{% url 'question_detail' pk=question.pk%}">{{question.question_title}}</a></h1>
+                <div class="date">
+                    <p>Created on: {{question.created_date}}</p>
+                </div>
+            </div>
+        {% endfor %}
+    </div>
+{% endblock %}

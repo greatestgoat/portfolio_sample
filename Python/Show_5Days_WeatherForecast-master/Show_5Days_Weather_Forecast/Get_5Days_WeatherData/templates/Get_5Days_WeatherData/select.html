@@ -1,0 +1,29 @@
+{% extends 'Get_5Days_WeatherData/base.html' %}
+
+{% block  content %}
+    {% comment %} <div class="sample">{{weather_data}}</div> {% endcomment %}
+    {% comment %} {% for item in object_list %}
+        <li>{{ item.time }}</li>
+    {% endfor %} {% endcomment %}
+    <table border="1">
+        <thead>
+            <tr>
+                <th>Time</th>
+                <th>Weather</th>
+                <th>Temperature</th>
+                <th>Rainfall</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% comment %} {% for time, weather, temp, rain in weather_data %} {% endcomment %}
+            {% for time,weather,temp,rain  in weather_data %}
+                <tr>
+                    <td>{{ time }}</td>
+                    <td>{{ weather }}</td>
+                    <td>{{ temp }}</td>
+                    <td>{{ rain }}</td>
+                </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+{% endblock  %}

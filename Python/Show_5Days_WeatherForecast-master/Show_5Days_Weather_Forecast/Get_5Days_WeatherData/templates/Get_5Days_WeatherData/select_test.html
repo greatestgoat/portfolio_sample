@@ -1,0 +1,26 @@
+{% extends 'Get_5Days_WeatherData/base.html' %}
+
+{% block  content %}
+    <form method="POST" class="select-form">
+        {% comment %} <table border="1">
+            <thead>
+                <tr>
+                    <th>Time</th>
+                    <th>Weather</th>
+                    <th>Temperature</th>
+                    <th>Rainfall</th>
+                </tr>
+            </thead>
+            <tbody>
+                {% for weatherdata in form %}
+                    <tr>
+                        <td>{{ weatherdata.time }}</td>
+                        <td>{{ weatherdata.weather }}</td>
+                        <td>{{ weatherdata.temperature }}</td>
+                        <td>{{ weatherdata.rainfall }}</td>
+                    </tr>
+                {% endfor %}
+            </tbody>
+        </table> {% endcomment %}
+    </form>
+{% endblock  %}

@@ -1,0 +1,13 @@
+django-admin startproject projectname
+python manage.py startapp appname
+
+# cmd
+rm -d -r db.sqlite3
+rm -d -r Get_5Days_WeatherData/migrations/*
+
+# Django
+python manage.py migrate --run-syncdb
+
+# MySQL
+mysql -u root -p
+show columns from tablename;
